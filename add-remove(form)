@@ -1,0 +1,23 @@
+private void ekleButton_Click(object sender, EventArgs e)
+        {
+            lbMalzeme.Items.Add(txtMalzeme.Text);
+            txtMalzeme.Clear();
+            txtMalzeme.Focus();   
+        }
+
+        private void cikarButton_Click(object sender, EventArgs e)
+        {
+            if (lbMalzeme.SelectedIndex != -1)
+                lbMalzeme.Items.RemoveAt(lbMalzeme.SelectedIndex);
+            else
+                MessageBox.Show("Seçim Yapmadınız");
+        }
+
+        private void silButton_Click(object sender, EventArgs e)
+        {
+            lbMalzeme.Items.Clear();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
