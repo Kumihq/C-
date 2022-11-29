@@ -1,0 +1,32 @@
+private void Hesapla()
+        {
+            double tutar;
+            tutar = Convert.ToDouble(textAcilis.Text);
+            if (kdv.Checked)
+                tutar += tutar * 0.18;
+            if (ozeliletisim.Checked)
+                tutar += tutar * 0.25;
+            if (abonekayit.Checked)
+                tutar += 22;
+            textTutar.Text = Convert.ToString(tutar);
+        }
+        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Hesapla();
+        }
+
+        private void kdv_CheckedChanged(object sender, EventArgs e)
+        {
+            Hesapla();
+        }
+
+        private void ozeliletisim_CheckedChanged(object sender, EventArgs e)
+        {
+            Hesapla();
+        }
+
+        private void abonekayit_CheckedChanged(object sender, EventArgs e)
+        {
+            Hesapla();
+        }
