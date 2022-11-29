@@ -1,0 +1,9 @@
+private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            if (trackBar1.Value <= 5)
+                sesLB.Text = "Düşük ses seviyesi";
+            else if (trackBar1.Value <= 10)
+                sesLB.Text = "Orta ses seviyesi";
+            else
+                sesLB.Text = "Yüksek ses seviyesi";
+        }
